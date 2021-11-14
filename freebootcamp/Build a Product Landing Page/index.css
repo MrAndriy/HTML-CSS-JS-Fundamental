@@ -165,7 +165,7 @@
 	margin-top: 50px;
 }
 
-#carousel-text {
+.carousel-text {
 	padding: 20px 150px;
 	color: #737079;
 	justify-content: center;
@@ -174,7 +174,7 @@
 	font-family: Rubik, sans-serif;
 }
 
-#carousel-text h5 {
+.carousel-text h5 {
 	color: #7648f8;
 	font-size: 24px;
 	word-wrap: break-word;
