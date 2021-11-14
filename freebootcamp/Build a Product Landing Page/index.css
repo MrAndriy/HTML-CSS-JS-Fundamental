@@ -1,0 +1,299 @@
+.logo img {
+	width: 204px;
+	height: auto;
+}
+
+* {
+	list-style: none;
+	text-decoration: none;
+}
+
+.grid {
+	display: flex;
+}
+
+#header {
+	background-color: #eee;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	min-height: 75px;
+	padding: 0px 20px;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#nav-bar ul li {
+	flex-direction: row;
+}
+.nav-link {
+	color: black !important;
+}
+
+.nav-link:hover {
+	color: #7648f8 !important;
+}
+
+#grow-instagram {
+	width: 100%;
+	height: 100%;
+	padding: 20px 20px 20px 20px;
+	background-image: url(https://res2.weblium.site/res/5f9635758fe99d00226853e6/5f966b73de27fc0021ff789e_optimized_1920);
+	background-size: cover;
+	background-position: center;
+	max-width: none;
+}
+
+#grow-instagram section {
+	padding: 200px 350px 200px 20px;
+}
+
+#grow-instagram-text {
+	flex-direction: column;
+	justify-items: left;
+	word-wrap: break-word;
+	flex-wrap: wrap;
+	color: white;
+}
+
+.ui--heroTitle {
+	font-size: 68px;
+	line-height: 1.1;
+	font-family: Nunito Sans, sans-serif;
+	font-weight: 900;
+	text-transform: none;
+	text-decoration: none;
+	font-style: normal;
+	letter-spacing: 0;
+}
+
+.ui-subtitle {
+	font-size: 18px;
+	line-height: 1.5;
+	font-family: Rubik, sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	font-style: normal;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#form {
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+#how-its-work {
+	padding: 50px 15px;
+}
+
+#how-its-work header,
+#our-sevices header {
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+#how-its-work footer {
+	justify-content: center;
+	flex-direction: row;
+	text-align: left;
+}
+
+.how-it-work-img-holder img {
+	width: 100%;
+	height: 100%;
+}
+
+.ui-dark-shade-color {
+	color: #1d1f2a;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 28.5px;
+}
+
+
+.ui-text-content {
+	font-size: 16px;
+	letter-spacing: 0px;
+	color: #5f6162;
+	font-family: Rubik, sans-serif;
+}
+
+#our-sevices {
+	padding: 80px 40px 110px 40px;
+}
+
+.ui-small-title {
+	color: #5f6162;
+	font-family: Rubik, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 1.2px;
+}
+
+.thin-border-inner {
+	height: 3px;
+	width: 4%;
+	background-color: #7648f8;
+}
+
+.thin-border {
+	justify-content: center;
+	padding: 15px 0px;
+}
+
+.ui-main-Text {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 48px;
+	line-height: 1.5;
+	letter-spacing: 0px;
+}
+
+.ui-main-Small-text {
+	font-family: "Rubik,sans-serif";
+	color: rgb(95, 97, 98);
+	font-size: 18px;
+	font-weight: 400;
+	padding: 10px 150px;
+}
+
+#carousel-info {
+	margin-top: 50px;
+}
+
+#carousel-text {
+	padding: 20px 150px;
+	color: #737079;
+	justify-content: center;
+	text-align: center;
+	font-size: 16px;
+	font-family: Rubik, sans-serif;
+}
+
+#carousel-text h5 {
+	color: #7648f8;
+	font-size: 24px;
+	word-wrap: break-word;
+}
+#carousel-info button {
+	background-color: #a284f3;
+}
+
+#pricing {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#pricing .text-container {
+	flex-direction: column;
+	align-items: center;
+}
+
+#pricing-list {
+	padding: 0px 35px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: calc(100% / 3);
+	margin: 10px;
+	padding: 0px 15px;
+}
+
+.product > .level {
+	font-family: Rubik, sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 1.2px;
+	text-align: center;
+	color: #5f6162;
+	padding: 15px 0;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.product > h2 {
+	margin-top: 15px;
+	color: #7648f8;
+}
+
+.product > ol {
+	margin: 15px 0;
+	padding: 0px;
+}
+
+.product > ol > li {
+	font-family: Rubik, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #5f6162;
+	padding: 5px 0;
+}
+
+.product > button {
+	border: 2px solid #7648f8;
+	margin: 15px 0;
+	padding: 15px 30px;
+	color: #4d5162;
+	background-color: white;
+	border-width: 2px;
+	border-radius: 5px;
+	font-family: Rubik, sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.product > button:hover {
+	background-color: #7648f8;
+	transition: background-color 1s;
+}
+
+#video {
+	margin: auto;
+}
+
+#contacts {
+	padding: 15px 15px;
+	margin-top: auto;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+}
+#contacts ul,
+p {
+	padding: 0px;
+	margin-bottom: 0px !important;
+}
+
+#contacts ul > li {
+	margin: 0px;
+	padding: 15px 15px;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media (max-width: 800px) {
+	#pricing-list {
+		flex-direction: column;
+	}
+	.product {
+		max-width: 300px;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
