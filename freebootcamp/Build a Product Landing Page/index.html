@@ -15,7 +15,7 @@
 <body>
 	<header id="header" class="grid">
 		<div class="logo">
-			<img id="header-img" src="https://res2.weblium.site/res/5f9635758fe99d00226853e6/5f980cd32e48c300212f4d93" alt="intagram grow logo" />
+			<img id="header-img" src="https://res2.weblium.site/res/5f9635758fe99d00226853e6/5f980cd32e48c300212f4d93" class="img-fluid" alt="intagram grow logo" />
 		</div>
 
 
@@ -189,7 +189,7 @@
 					</div>
 					<h2 class="ui-main-Text">Promote Yourself on Instagram</h2>
 				</header>
-				<div id="carousel-info" class="carousel slide" data-bs-ride="carousel">
+				<div id="carousel-info" class="carousel slide carousel-dark" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#carousel-info" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 						<button type="button" data-bs-target="#carousel-info" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -362,6 +362,22 @@
 			</div>
 
 			<div id="subscribe">
+				<div class="subscribe_container">
+					<div class="subscribe_text">
+						<p>SUBSCRIBE</p>
+						<h2>Stay In Touch With Us</h2>
+						<p>Subscribe to our newsletter to get the latest news.</p>
+					</div>
+					<div class="subcribe_form">
+						<form class="form-inline">
+							<div class="form-group mb-2">
+								<label for="staticEmail2" class="sr-only"></label>
+								<input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Email">
+							</div>
+							<button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+						</form>
+					</div>
+				</div>
 			</div>
 
 			<div id="pricing">
@@ -412,9 +428,70 @@
 						<button class="btn">Get started</button>
 					</div>
 				</section>
-				<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/5ypjbO23HB4" title="YouTube video player" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 			</div>
+
+			<div id="revieews">
+				<header class="revw-cont">
+					<div class="subtitle-title-holder">
+						<p>REVIEWS</p>
+					</div>
+					<div class="title-holder">
+						<h2>Testimonials From Our Clients</h2>
+					</div>
+				</header>
+				<!--  dont work ??????? --> 
+				<div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-25 mx-auto" src="https://res2.weblium.site/res/5f9635758fe99d00226853e6/5f97729818aa9f00211e315a_optimized.webp" alt="First slide">
+							<div class="carousel-caption d-md-block">
+								<h5 class="text-black">Alice Morris</h5>
+								<p class="text-secondary">Fitness Coach</p>
+								<p class="text-secondary">"I started working with InstaGrow approximately two months ago. Since then my audience has raised 2 times! Only specific people have been
+									targeted exactly how it
+									should be. No fakes, no strange
+									profiles. Only high-quality leads."</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-25 mx-auto" src="https://res2.weblium.site/res/5f9635758fe99d00226853e6/5f97729643536800213a3610_optimized_500_c500x500-0x0.webp" alt="Second slide">
+							<div class="carousel-caption d-md-block">
+								<h5 class="text-black">Tom Bricks</h5>
+								<p class="text-secondary">Business Owner</p>
+								<p class="text-secondary">"I have long wanted to start promoting my Instagram account but I hardly have time for this. On Instagram, it is important to make posts
+									and
+									stories every day. Therefore, I have decided to try
+									InstaGrow services and am already pleased with the results."</p>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<!--  -->
+			</div>
+
+			<div id="F_A_Q">
+				<div class="f_a_q_title-container">
+					<p>FAQ</p>
+					<h2>Frequently Asked Questions</h2>
+				</div>
+
+
+
+			</div>
+
 			<div id="contacts" class="grid">
 				<ul class="grid">
 					<li><a href="#">Privacy</a></li>
@@ -422,6 +499,12 @@
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</div>
+
+
+
+			<!-- Youtube video -->
+			<!-- <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/5ypjbO23HB4" title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 		</div>
 	</main>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
