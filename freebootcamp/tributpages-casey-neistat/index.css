@@ -1,0 +1,26 @@
+.title {
+  font-family: 'Amatic SC', cursive;
+}
+#casey{
+  font-size: 100px;
+}
+
+#quote {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 30px;
+
+}
+#small {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 20px;
+    color: lightblue;
+  
+}
+#name {
+  font-size: 20px;
+}  
+#find {
+  padding: 25px;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 30px;
+}
