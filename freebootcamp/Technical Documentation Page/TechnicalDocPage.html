@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/TechnicalDocPage.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>TechnicalDocPage</title>
+</head>
+<header>
+    <nav class="" id="navbar">
+        <header>JS Documentation</header>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <ul>
+            <li>
+                <a class="nav-link active" aria-current="page" href="#Identifiers_and_Reserved_Words">Identifiers and Reserved Words</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Javascript_types">Javascript types</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Reference_vs_value">Reference vs value</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Property_Attributes_of_an_object">Property Attributes of an object</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Type_Conversion">Type Conversion</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Increment_and_Decrement_Operators">Increment and Decrement Operators</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Variable_Scoping">Variable Scoping</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Context_of_calling_(call()_apply()_bind())">Context of calling (call() apply() bind())</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Exception_Handling">Exception Handling</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Loops">Loops</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Object_-_Date">Object - Date</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Object_-_Array">Object - Array</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Closures">Closures</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#ES6:_let_and_scope">ES6: let and scope</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#ES6:_Arrow_functions">ES6: Arrow functions</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Function_hoisting">Function hoisting</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Strict_mode_of_javascript">Strict mode of javascript</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Enhanced_Object_Literals">Enhanced Object Literals</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Default,_Rest,_Spread">Default, Rest, Spread</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Map_+_Set">Map + Set</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Promises">Promises</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Overriding">Overriding</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<body>
+    <main id="main-doc" class="container">
+        <section class="main-section" id="Identifiers_and_Reserved_Words">
+            <header>Identifiers and Reserved Words</header>
+            <div>
+                <div>
+                    <p><strong> Naming Conventions for JavaScript Variables </strong></p>
+                    <p>
+                        Choosing the right variable name is one of the most important and complex
+                        things in programming. The fact is that most of the time we spend is not
+                        on the initial writing of the code, but on its development.
+                        These are the following rules of naming a JavaScript variable:
+                    </p>
+                    <ol>
+                        <li>
+                            A variable name must start with a letter, underscore(_), or dollar
+                            sign($) (<code>let _x, var $</code>)
+                        </li>
+                        <li>A variable name cannot start with a number (<code>let 1x</code>)</li>
+                        <li>
+                            A variable name can only contain alpha-numeric characters(A-z, 0-9) and
+                            underscores (<code>let my-data</code>)
+                        </li>
+                        <li>A variable name cannot contain space (<code>let my data</code>)</li>
+                        <li>
+                            Variables of several worlds are written in the style of camelCase (<code>let
+                                myNewVariable </code>)
+                        </li>
+                        <li>Cannot use translit - only English (<code>let imiya ---> let name </code>)</li>
+                        <li>
+                            The name of the variable should correspond as clearly as possible to the
+                            data stored in it.
+                        </li>
+                        <li>
+                            A variable name cannot be a JavaScript keyword or a JavaScript reserved
+                            word.
+                        </li>
+                        <li>
+                            JavaScript variables are case sensivitive ( <code>sum</code> and <code>Sum</code> are different
+                            variable )
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <h2>Reserved Words</h2>
+                    <p>
+                        There is a list of reserved words that cannot be used when naming
+                        variables, since the are used by the language itself:
+                        <code>
+                            abstract, boolean, break, byte, case, catch, char, class, continue,
+                            debugger, default, delete, do, double, else, enum, export, extends, false,
+                            final, finaly, float, for, function, goto, if, implements, import, in,
+                            instanceof, int, inteface, long, native, new, null, package, private,
+                            protected, public, return, short, static, super, switch, synchronized,
+                            this, throw, throws, transient, true, try, typeof, var, volatile, void,
+                            while, with.</code><br>
+                        The following example will produce a syntax error: <br>
+                        <code> if = 10; // Uncaugnht SyntaxError: Unexpected token if </code>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="Javascript_types">
+            <header>Javascript types</header>
+            <div>
+                <div>
+                    <h2>Data types</h2>
+                    <ol>
+                        <li><code>String</code> - represents sequence of charters</li>
+                        <li><code>Number</code> - represents numeric values</li>
+                        <li><code>Boolean</code> - represents ogical data type</li>
+                        <li><code>Undefined</code> - represents undefined </li>
+                        <li><code>Null</code> - represents</li>
+                        <li><code>Object</code> - represents</li>
+                    </ol>
+                </div>
+                <div>
+                    <h2>Data types. Number</h2>
+                    <p>
+                        Numbers(Number types) in JavaScript can take two forms - integers and
+                        fractional numbers (floating-point numbers). We can use both positive and
+                        negative numbers. <br>
+                        <code> let x = 45;</code><br>
+                        <code> let y = -23900;</code><br>
+                        There are Special numerical values Infinity/-Infinity and NaN
+                        (Not-a-Number, calculation error).
+                        They also belong to type number.
+                        For example, Infinity is obtained by dividing by zero: <br>
+                        <code>console.log(100/0); //Infinity </code><br>
+                        A -Infinity can be obtained by dividing a negative number by zero: <br>
+                        <code>console.log(-100/0); //-Infinity </code><br>
+                        NaN calculation error will be the result of an incorect mathematical
+                        operation: <br>
+                        <code> console.log("Hello World!" * 5); //NaN</code>
+                    </p>
+                </div>
+                <div>
+                    <h2>Data types. String. Boolean</h2>
+                    <p>
+                        The string type represents strings, that is, data is enclosed in quotain
+                        marks: <br>
+                        <code>
+                            let str= "Hello my friend!"; <br>
+                            str = `Single quotes will do too`; <br>
+                        </code>
+                        In JavaScript single and double quotes are equal. <br>
+                        Boolean - logical data type. It has only two values - true and false <br>
+                        Typically, this is used to store yes/no values; <br>
+                        <code>
+                            let isValid = true; <br>
+                            isValid = false;
+                        </code>
+                    </p>
+                </div>
+                <div>
+                    <h2>Data types. Null. undefined</h2>
+                    <p>
+                        Null - separate type consisting of single null value. Assigning a value of
+                        null means that the variable has some undefined value (not a number, not a
+                        string, not a boolean value), but still it has a value:
+                    </p>
+                    <p><code>let age = 15:</code></p>
+                    <p><code>age = null ; // Value deletion</code></p>
+                    <p>
+                        Undefined - special value, which, like null, forms its own type. It makes sense. No value assigned. If a variable is declared, but nothing is written to it, then its is just
+                        undefined :
+                    </p>
+                    <p><code>let u;</code></p>
+                    <p><code>console.log(u); //undefined</code></p>
+                    <p>You can assign undefined and explicity:</p>
+                    <p><code>let x =123;</code></p>
+                    <p><code>x = undefined;</code></p>
+                </div>
+                <div>
+                    <h2>Data types. Object</h2>
+                    <p>
+                        The object type represents a complex object. The simple defination of an
+                        object is represented by curly brackets:
+                    </p>
+                    <p><code>let user = {}</code></p>
+                    <p><code>let user = {</code></p>
+                    <p><code>firstName: "Alex",</code></p>
+                    <p><code>lastName: "Heetch",</code></p>
+                    <p><code>email: "box@gmail.com",</code></p>
+                    <p><code>age: 28</code></p>
+                    <p><code>};</code></p>
+                    <p>The object type is, for example, dates, it is used for data collections and more.</p>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="Reference_vs_value">
+            <header>Reference vs value</header>
+            <div>
+                <p>To be continue</p>
+            </div>
+        </section>
+        <section class="main-section" id="Property_Attributes_of_an_object">
+            <header>Property Attributes of an object</header>
+            <div>
+                <div>
+                    <h1>JavaScript objects</h1>
+                    <p>
+                        Understanding objects is very important to JavaScript because vertually
+                        everthing is an <code>"object"</code> . All JavaScript
+                        values, except primitives, are objects. Object are used to store collections of various values and more complex entities.
+                        An object can be created using curly braces <code>{....} </code> with an optional
+                        property list. A property is a <code>key: value pair</code> , where a
+                        <code>key is a string</code> (also called a "property
+                        name"), and the <code>value can be anything</code>. <br>
+
+                        <code>let employee = { </code><br>
+                        <code>firstName: "Peter", </code><br>
+                        <code>lastName: "Peterson", </code><br>
+                        <code>position: "developer", </code><br>
+                        <code>experience : 1 </code><br>
+                        <code>} </code>
+                    </p>
+                </div>
+                <div>
+                    <h2>Access to properties</h2>
+                    <p>
+                        Properties of the object can be accessed using the following <code>two notations</code> <br>
+
+                        <code>" . " - dot notation </code><br>
+                        <code>" [ ] " - square bracket notation </code><br>
+                        <code>let employee = { </code><br>
+                        <code>firstName: "Peter", </code><br>
+                        <code>lastName: "Peterson", </code><br>
+                        <code>position: "developer", </code><br>
+                        <code>experience: 1 </code><br>
+                        <code>} </code><br>
+                        <code>employee.firstName; // Peter </code><br>
+                        <code>employee["lastName"]; // Peterson </code>
+                    </p>
+
+                </div>
+                <div>
+                    <h2>JavaScript Object. Acces to properties by dot notation</h2>
+                    <p>
+                        New properties can be added using the dot notation as show below: <br>
+                        <code>employee.sallary = 2000; </code><br>
+                        <code>console.log(employee); // we add new key sallary with value </code><br>
+                    </p>
+                </div>
+                <div>
+                    <h2>JavaScript Object. Acces to properties by square bracket notation</h2>
+                    <p> New oroperties can be added using the square bracket notation as show below: <br>
+                        <code>employee["age"] = 29; </code><br>
+                        <code>console.log(employee); // new key with value </code><br>
+                        Properties can also be accesed using a variable having value equal to the property name as show : <br>
+                        <code>var salaryProperty = "salary"; </code><br>
+                        <code>console.log(employee[salaryProperty]); // 2000 </code><br>
+                        <code>console.log(employee.salaryProperty); // undefined </code><br>
+                        For properties whose names consist of several words, access to the value "through the dot" does not work, but through square brackets it works: <br>
+                        <code>employee.extra salary = 500 // error </code><br>
+                        <code>employee["extra salary"] = 500 // 500 </code>
+                    </p>
+                </div>
+                <div>
+                    <h2>JavaScript Objects. Methods</h2>
+                    <p> Not only primitive values but also methods can be values for object properties. The methods of an object determinate its behavior or the actions it performs. Methods are
+                        functions.
+                    </p>
+                    <p>
+                        <code>let employee = { </code><br>
+                        <code>firstName: "Peter", </code><br>
+                        <code>lastName: "Peterson", </code><br>
+                        <code>position: "developer", </code><br>
+                        <code>experience: 1, </code><br>
+                        <code>fullName: function(){ </code><br>
+                        <code>return this.firstName + " " + this.lastName; </code><br>
+                        <code>} </code><br>
+                        <code>employee.fullName(); // Peter Peterson </code>
+                    </p>
+                </div>
+                <div>
+                    <h2>this keyword</h2>
+                    <p>
+                        The JavaScript this keyword refers to the object it belong to. The behavior of keyword this depends on the context in which it is used. In a method, this refers to the owner
+                        object. Alone, this refers to the global object. In a function, this refers to the global object. In the function, in strict mode, this is undefined. In an event, this refers
+                        to
+                        the element that received the event.
+                    </p>
+                    <p>this in a method
+                        <code>let employee = { </code><br>
+                        <code>firstName: "Peter"; </code><br>
+                        <code>lastName: "Peterson"; </code><br>
+                        <code>fullName: function() { </code><br>
+                        <code>return this.firstName + " " + </code><br>
+                        <code>this.lastName; </code><br>
+                        <code>} </code><br>
+                        <code>employee.fullName(); // Peter Peterson </code><br>
+                        This alone <br>
+                        <code>let a = this </code><br>
+                        <code>console.log(a); // Window </code><br>
+                        this in a Function (Default)<br>
+                        <code>Function userFunction() { </code><br>
+                        <code>return this; // Window </code><br>
+                        <code>} </code><br>
+                        this in a Function (Strick) <br>
+                        <code>"use strick"; </code><br>
+                        <code>function userFunction() { </code><br>
+                        <code>retuen this; // undefined </code><br>
+                        <code>} </code><br>
+                        In HTML event handlers, this refers to the HTML element that received the event: <br>
+                        <code>
+                            &lt;button onclick="this.style.display='none'"&gt;click to Remove Me! &lt;/button&gt;
+                        </code>
+                    </p>
+                </div>
+                <div>
+                    <h2>JavaScript Objects. hasOwnProperty()</h2>
+                    <p>
+                        The hasOwnProperty () method retuens a Boolean value that indicates whether the object cointains the specified own (un unherited) property or method.
+                        The methods retuens true if the object has an un inherited property with the specified name and false if the object doesn not have a property with the specified name.
+                        <code>obj.hasOwnProperty(prop)</code>
+                    </p>
+                    <p><code>let myObj = { // create an object </code><br>
+                        <code>myProperty: 1000, </code><br>
+                        <code>myProperty2; function() { console.log("hello"); } </code><br>
+                        <code>}; </code><br>
+                        // check whether the object cointains the specified own (not inherited)<br>
+                        // property, or the method <br>
+                        <code>console.log(myObj.hasOwnProperty("myProperty") ); // true </code><br>
+                        <code>console.log(myObj.hasOwnProperty("myProperty2") ); // true </code><br>
+                        <code>console.log(myObj.hasOwnProperty("myProperty3") ); // false </code><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="Type_Conversion">
+            <header>Type Conversion</header>
+            <div>
+                <div>
+                    <p>While writting programs, you may need to convert data from one type to another. The three most widely used type conversions are to:</p>
+                    <p>
+                        <code>- to String</code><br>
+                        <code>- to Number</code><br>
+                        <code>- to Boolean</code><br>
+
+                    </p>
+                    <h2>Type Conversions. String</h2>
+                    <p>
+                        Convert to string: <br>
+                        <code>Function String()</code><br>
+                        <code>let a = 20;</code> <br>
+                        <code>let data = String(a);</code> <br>
+                        <code>console.log(data); // "20"</code> <br>
+                        <code>console.log(typeof data); // "string"</code> <br>
+                        <code>Operation + and empty string // "string"</code>
+                    </p>
+                </div>
+                <div>
+                    <h2>Type Conversions. Number</h2>
+                    <p>
+                        Convert to Number: <br>
+                        <code>Function Number()</code><br>
+                        <code>let a = "20";</code><br>
+                        <code>let num = Number(a);</code><br>
+                        <code>console.log(num); // 20</code><br>
+                        <code>console.log(typeof num); // "number"</code><br>
+                    </p>
+                    <p>Unary operation + <br>
+
+                        <code>let a = "20";</code><br>
+                        <code>let num = +a;</code><br>
+                        <code>console.log(num); // 20</code><br>
+                        <code>console.log(typeof num); // "number"</code><br>
+                    </p>
+                    <p>
+                        Additional useful function for working with number: <br>
+                        <code>Function parseInt() - convert to an integer</code><br>
+                        <code>console.log(parseInt("7")); // 7</code><br>
+                        <code>console.log(parseInt("7.5")); // 7</code><br>
+                        <code>console.log(parseInt("7nm")); // 7</code><br>
+                        <code>console.log(parseInt("nm")); // NaN</code><br>
+                    </p>
+
+                    <p>
+                        <code>Function parseFloat()</code> - converts to a fractional number <br>
+                        <code>console.log(parseFloat("7")); // 7</code><br>
+                        <code>console.log(parseFloat("7.125")); // 7.125</code><br>
+                        <code>console.log(parseFloat("7nm")); // 7</code><br>
+                        <code>console.log(parseFloat("nm")); // NaN</code><br>
+                    </p>
+
+                    <p>
+                        <code>Function isNan()</code> - checks if a value represents a number <br>
+                        <code>console.log(isNaN(1)); // false</code><br>
+                        <code>console.log(isNaN("1")); // false</code><br>
+                        <code>console.log(isNaN("1nm")); // true</code><br>
+                        <code>console.log(isNaN(true)); // false</code><br>
+                        <code>console.log(isNaN(null)); // false</code><br>
+                        <code>console.log(isNaN(undefined)); // true</code><br>
+                    </p>
+                </div>
+                <div>
+                    <h2>Type Conversions. Boolean</h2>
+                    <p>
+                        Boolean conversion: <br>
+                        <code>Function Boolean()</code><br>
+                        <code>let a = "1";</code><br>
+                        <code>let bln = Boolean(a)</code><br>
+                        <code>console.log(bln); // true</code><br>
+                        <code>console.log(typeof bln); // "boolean"</code><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="Increment_and_Decrement_Operators">
+            <header>Increment and Decrement Operators</header>
+            <div>
+                <div>
+                    <h2>Operators</h2>
+                    <p><strong>JavaScript Operators.</strong> An operator is a special charter that tells the translator that an operation with some operands is required. let us take a simple
+                        expression 2
+                        * 3 is equal to 6. Here 2 and 3 are called operands (argument/parameter) and "*" is called the operator. To work with variables and their values. JavaScript supports all
+                        standard
+                        operations (operators/actions), most of which are in other programming languages.
+                    </p>
+                    <p>
+                        Unary is an operation that applies to a single operand. For example, the unary minus operation reverses the sign of a number: <br>
+                        <code>let k = 5;</code><br>
+                        <code>console,log(-k); // -5 unary minus</code><br>
+                        <code>console.log(-(k*2)); // -10, unary minus applied to the result of multiplication k*2</code><br>
+                        <code>console.log(-(-3)); // 3</code><br>
+                    </p>
+
+                    <p> Binary is an operation that applies to two operands. The minus operation also exist in binary form: <br>
+                        <code>let k = 6;</code><br>
+                        <code>let 1 = 2;</code><br>
+                        <code>console.log(k-1); // 4, binary minus</code><br>
+                    </p>
+                </div>
+                <div>
+                    <h2>JavaScript operators</h2>
+                    <ol>
+                        <li>Arithmetic Operators</li>
+                        <li>Assignment Operators</li>
+                        <li>Comparison Operators</li>
+                        <li>Logical (or Relatinal) Operators</li>
+                        <li>Bitwise Operators</li>
+                        <li>Conditional (or trenary) Operators</li>
+                    </ol>
+
+                    <h2>Arithmetic Operators</h2>
+                    <p> Arithmetic (mathematical) operations: Addition + <br>
+                        <code>let z =20;</code><br>
+                        <code>console.log(z+10); //30</code><br>
+                        Substraction - <br>
+                        <code>let z = 8;</code><br>
+                        <code>console.log(z-5); // 3</code><br>
+                        Multiplication * <br>
+                        <code>let z = 5;</code><br>
+                        <code>console.log(z * 3); //15</code><br>
+                        Division / <br>
+                        <code>let z = 12;</code><br>
+                        <code>console.log(z/3); // 4</code><br>
+                        The remainder of the division (division modulo) % <br>
+                        <code>console.log(8 % 4); // 0</code><br>
+                        <code>console.log(7 % 3) // 1</code><br>
+                        <code>console.log(8 % 3) // 2</code><br>
+                    </p>
+                </div>
+                <div>
+                    <h2>Arithmetic Operators. Increment</h2>
+                    <p>Increment ++ - increases the value of the variable by one. There is a prefix increment that first increments the variable by one, and then returns its value. And there is a
+                        postfix
+                        increment that first return the value of the variable, and then increments it by one: <br>
+                        <code>let m = 5;</code><br>
+                        <code>let n =++m; // prefix increment</code><br>
+                        <code>console.log(m); // 6</code><br>
+                        <code>console log(n); // 6</code><br>
+                        <code>let k = 5;</code><br>
+                        <code>let 1 = k++; //postfix increment</code><br>
+                        <code>console.log(k); //6</code><br>
+                        <code>console.log(1); //5</code><br>
+                        <code>a = a + 1; // a++</code><br>
+                    </p>
+
+                    <h2>Arithmetic Operators Decrement</h2>
+                    <p>Decrement-- decreases the value of the variable by one. There is also a prefix and postfix decrement: <br>
+                        <code>let m = 5;</code><br>
+                        <code>let n = --m; // prefix decrement</code><br>
+                        <code>console.log(m); // 4</code><br>
+                        <code>console.log(n); // 4</code><br>
+                        <code>let k = 5;</code><br>
+                        <code>let 1 = k--; // postfix decrement</code><br>
+                        <code>console.log(k); // 4</code><br>
+                        <code>console.log(1); // 5</code><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="Variable_Scoping">
+            <header>Variable Scoping</header>
+            <div>
+                <div>
+                    <h2>Scope</h2>
+                    <p>In JavaScript there are two types of scope: <br>
+                        <code>
+                            Local scope<br>
+                            Global scope
+                        </code><br>
+                        JavaScript has function scope: each function creates a new scope. Scope determinas the accessibility (visibility) of these variables. Variables defined inside a function are
+                        not
+                        accessible (visible) from outside the function. <br>
+                    </p>
+                    <h2>Local scope</h2>
+                    <p>
+                        Variables declared within a JavaScript function, become LOCAL to the function. <br>
+                        Local variables have Function scope: they can only be accesed from within the function. <br>
+                        <code>//code here can NOT use "name" <br>
+                            function myFunction() { <br>
+                            let name = "John"; //code here CAN use "name" <br>
+                            }</code><br>
+                        Since local variables are only recognized inside their functions, variables with the same name can used in different functions. Local variables are created when a function
+                        starts,
+                        and deleted when the function is completed.
+                    </p>
+                    <h2>Global scope</h2>
+                    <p>
+                        A variable declared outside a function, becomes GLOBAL. A global variable has global scope: all scripts and functions on a web page can access it.
+                        <code>
+                            let name = "John"; <br>
+                            // code here can use "name" <br>
+                            function myFunction() { <br>
+                            //code here can also use "name" <br>
+                            }
+                        </code><br>
+                        It is advisable to minimaze the use of global variables. In modern code, there are usually few or no global variables. Althought thety are sometimes useful for storing the most
+                        important "general project" data.
+                    </p>
+                    <h2>Concealment of variables</h2>
+                    <p>If the local variable has the</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="main-section" id="Context_of_calling_(call()_apply()_bind())">
+            <header>Context of calling (call() apply() bind())</header>
+            <div>
+                <h2>to be continue...</h2>
+            </div>
+        </section>
+        <section class="main-section" id="Exception_Handling">
+            <header>Exception Handling</header>
+            <div>
+                <h2>to be continue...</h2>
+            </div>
+        </section>
+        <section class="main-section" id="Loops">
+            <header>Loops</header>
+            <div>
+                <div>
+                    <h2>JavaScript loops</h2>
+                    <p>
+                        JavaScript loops are used to repeatedly run a block of code - until a certain condition is met. Repeating a loop is called iteration. To control the number of iterations, use
+                        counters, these are ordinary variables. JavaScript supports different kinds of loops: - while - loops throught a block of code while a specified condition is true; - do / while
+                        -
+                        also loops throught a block of code while a specified condition is true; - for - loops throught a block of code a number times; - for / in - loops throught the properties of an
+                        object and arrays; - for / of - loops throught the values of an iterable object.
+                    </p>
+
+                    <h2>While loop</h2>
+                    <p>The while loop has following syntax: <br>
+
+                        <code>while(condition){ <br>
+                            //code <br>
+                            //also called 'loop body' <br>
+                            } <br>
+                        </code>
+                        Code from the loop body is executed while the condition is true.. <br>
+                        Example: <br>
+                        <code>
+                            let i = 0; <br>
+                            while (i &lt; 3) { //prints 0, then 1, then 2 <br>
+                            alert(i); <br>
+                            i++; <br>
+                            } <br>
+                        </code>
+                    </p>
+
+                    <h2>Do..while loop</h2>
+                    <p>
+                        The do..while loop has following syntax: <br>
+                        <code>do { <br>
+                            //loop body <br>
+                            } while (condition)
+                        </code><br>
+                        Code from the loop body is executed as long as the condition is true. <br>
+                        This form of syntax is justified if you want the loop body be executed at least once, even if the condition is false. <br>
+                        Example: <br>
+                        <code>
+                            let i = 0; <br>
+                            do { <br>
+                            alert(i); <br>
+                            i++; <br>
+                            } while (i &lt; 3 ); <br>
+                        </code>
+                    </p>
+                </div>
+                <div>
+                    <h2>For loop</h2>
+                    <p>
+                        A for loop reperts untill a specified condition evaluetes to false. The JavaScript for loop similar to the Java and C for loop. A for Statement looks as follows: for
+                        <code>([inititalExpression];[condition];[incrementExpression]) statement</code> The initializing expression initialExpression, if any, is executed. This expression usually
+                        initializes one or more loop counters, but the syntzx allows an expression of any degree of complexity. This expression can also declarare variables. The condition expression
+                        is
+                        evaluated. If the value of <code>condition is true</code>, the loop statements <code>execute</code>. If the value of <code>condition is false</code>, the for
+                        <code>loop terminates.</code> If the condition expression is omitted entirely, the condition is assumed to be true. The statement executes. To execute multiple statements, use
+                        a block statement({....}) to group those statements. if present, the update expression incrementExpression is executed.
+                    </p>
+                    <p>
+                        Control returns to step 2. <br>
+                        <code>
+                            for(count = 0; count &lt; 10; count++){ <br>
+                            console.log("Current Count: " + count" ); <br>
+                            }
+                        </code>
+                    </p>
+
+                    <h2>For in</h2>
+                    <p>
+                        The for in construct is designed to
+                        iterate over arrays and objects: <br>
+                        <code>
+                            let cities = ["Rome", "Lviv", "Warsaw"]; <br>
+                            for(let i <br>
+                            in cities) { //run 3 times <br>
+                            console.log(cities[i]); <br>
+                            } <br>
+                        </code>
+
+                        Similar actions can be done with for: <br>
+                        <code>
+                            let cities =["Rome","Lviv","Warsaw"]; <br>
+                            for (let i= 0; i &lt; cities.lenght; i++) { //run 3 times <br>
+                            console.log(cities[i]); <br>
+                            }; <br>
+                            console.log(cities); //["Rome,"Lviv","Warsaw"]
+                        </code>
+                    </p>
+
+                    <h2>For of</h2>
+                    <p> The JavaScript for of statement loops throught the values of an iterable objects. for of lets you loop over data structures that are iterable such as Arrays, Strings, Maps,
+                        NodeList, and more. <br>
+                        The for of loop has the following syntax: <br>
+                        <code>
+                            for (variable <br>
+                            of iterable ) { <br>
+                            //code <br>
+                            } <br>
+                        </code>
+                        variable - for every iteration the value of the next property is assigned
+                        to the variable. Variable can declared with <code>const, let, or var</code>. iterable - an object that has iterable properties. <br>
+                        Example: <br>
+                        <code>
+                            let str = "Message"; <br>
+                            let a; <br>
+                            for (a of str) { <br>
+                            document.write(a + ""); <br>
+                            }
+                        </code>
+                    </p>
+
+                </div>
+                <div>
+                    <h2><strong>Loops.</strong> Break, continue</h2>
+                    <p> Using the break keyword, you can stop the loop at any time: <br>
+                        <code>
+                            let k = 1; <br>
+                            while (true) { //run 3 times <br>
+                            if (k==4) { <br>
+                            break; <br>
+                            } <br>
+                            console.log(k); <br>
+                            k++ <br>
+                            } <br>
+                        </code>
+                        Using the continue keywords, you can stop current iteration and move on the next: <br>
+                        <code>
+                            for (let k = 1; k &lt;=10; k ++ ){ //run 10 times; <br>
+                            if ( k===5) { <br>
+                            continue; <br>
+                            } <br>
+                            console.log(k); //1,2,3,4,5,6,7,8,9,10 } <br>
+                        </code>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="Object_-_Date">
+            <header>Object - Date</header>
+            <div>
+                <h2>to be continue ...</h2>
+            </div>
+        </section>
+        <section class="main-section" id="Object_-_Array">
+            <header>Object - Array</header>
+            <div>
+                <h2>to be continue</h2>
+            </div>
+        </section>
+        <section class="main-section" id="Closures">
+            <header>Closures</header>
+            <div>
+                <p> Closeure is a function that remembers its external variables (parent scope) and can acces them. Closure technically in volves three components: </p>
+                <ol>
+                    <li> an external fucntion that defines a certain scope and in which certain variables are defined - the lexical environment </li>
+                    <li> variables (lexical enviroment), which are defined in the external function</li>
+                    <li>a nested function that uses these variables.</li>
+                </ol>
+                <p>
+                    Classiccal function <br>
+                    <code>
+                        function sum() { <br>
+                        var a = 1; <br>
+                        var b = 1; <br>
+                        return a = a + b; <br>
+                        console.log(sum()); //2 <br>
+                        console.log(sum()); //2 <br>
+                        console.log(sum()); //2 <br>
+                    </code>
+                    Closure <br>
+                    <code>
+                        function sum(){ <br>
+                        var a = 1; <br>
+                        var b = 1; <br>
+                        return function(){ <br>
+                        return a = a + b; <br>
+                        }; <br>
+                        } <br>
+                        var c = sum(); <br>
+                        console.log(c()); //2 <br>
+                        console.log(c()); //3 <br>
+                        console.log(c()); //4 <br>
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section class="main-section" id="ES6:_let_and_scope">
+            <header>ES6: let and scope</header>
+            <div>
+                <p> In ES6, the keywords <code>let</code> and <code>const</code> are used instead of <code>var</code> to declare variables. Let opportunities: <br></p>
+                <ol>
+                    <li>new block scope - block <code>{...}</code> </li>
+                    <li>the variable is visible ONLY after declaration</li>
+                    <li>a new variable is created in the loop after each iteration</li>
+                </ol>
+                <p>Const opportunities: it`s just a constant (<code>const PI = 3.14159265359</code>) <br>
+                    1) new block scope - block <code>{...}</code>. A variable declaredd through <code>var</code> is visible everywhere
+                    in a function. The varaible delcared through <code>let</code> is visible only within the framework of the block <code>{...}</code> in which it is declared. <br>
+                    <code>
+                        if (true){<br>
+                        var name1 = "Ben";<br>
+                        let name2 = "Nick"<br>
+                        } <br>
+                        console.log(name1); // Ben<br>
+                        console.log(name2); // reference Error: name2 is not defined<br>
+                    </code>
+                </p>
+                <p>
+                    2) the variable is visible ONLY after the declaration. Variables delcared though <code>var</code> exist even before the declaration (hoisting). Variables declared via
+                    <code>let</code> do not exist before declaration: <br>
+                    <code>
+                        alert(name1); // undefined <br>
+                        var name1 = "Ben"; <br>
+                        alert(name1); // ReferenceError: name1 is not defined <br>
+                        let name1 = "Ben" <br>
+                    </code>
+                </p>
+                <p>
+                    3) a new variable is created in the loop after each iteration. The <code>var i</code> declaration creates one variable for all iterations of the loop,so all functions close the
+                    same variable. <br> The declaration <code>let i</code> creates for each repertition of a block in a loop its variable, which the function receives from the closure. <br>
+                    For var <br>
+                    <code>
+                        var array = []; <br>
+                        for (var i = 0; i &lt; 10; i++) { <br>
+                        array[i] = function() { <br>
+                        alert(i); <br>
+                        }; <br>
+                        } <br>
+                        array[0](); // 10 <br>
+                        array[4](); // 10 <br>
+                    </code>
+                    and for let <br>
+                    <code>
+                        let array = []; <br>
+                        for (var i = 0; i &lt; 10; i++) { <br>
+                        array[i] = function() { <br>
+                        alert(i); <br>
+                        }; <br>
+                        } <br>
+                        array[0](); // 0 <br>
+                        array[4](); // 4 <br>
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section class="main-section" id="ES6:_Arrow_functions">
+            <header>ES6: Arrow functions</header>
+            <div>
+                <div>
+                    <p> Arrow functions ("=>") are a new short syntax for creating functions in ES2015. You don`t need the <strong>function keyword,</strong> the <strong>return keyword,</strong> and
+                        the
+                        <strong>curly brackets.</strong> <br>
+                        ES6 arrow function: <br>
+                        <code> let reflect = value => value; </code><br>
+                        ES5 function: <br>
+                        <code>
+                            let reflect = function(value) { <br>
+                            return value; <br>
+                            }; <br>
+                        </code>
+                    </p>
+                    <p>Arrow functions are not hoisted. They must be defined before they are used. If there are several parameters, they are wrapped in parentheses. <br>
+                        Arrows-function with several arguments: <br>
+                        <code>
+                            let sum = (a,b) => a + b; <br>
+                            // ES5 analog <br>
+                            // let sum = function(a,b) {return a + b; } <br>
+                            alert(sum(1,2)); // 3 <br>
+                        </code>
+                        arrow function on a callback <br>
+                        <code>
+                            let arr = [5,8,3] <br>
+                            let sorted = arr.sort( (a,b) => a - b); <br>
+                            alert(sorted); // 3, 5, 8 <br>
+                        </code>
+                    </p>
+                </div>
+                <div>
+                    <h2>Arrow functions do not have their own this</h2>
+                    <p> An important difference in the behavior of the arrow functions with respect to the functional expressions is that they do not attach their meaning to this and refer to this
+                        declared in the parent function. This makes the code much more compact in many cases when we need to access the object instance. <br>
+                        Function ES5 <br>
+                        <code>
+
+                            function Person() { <br>
+                            let self = this; // here we catch this <br>
+                            this.age = 0; <br>
+                            setInterval(function growUp(){ <br>
+                            self.age++; <br>
+                            }, 1000); <br>
+                            } <br>
+                            let p = new Person(); <br>
+                        </code>
+                        Arrow function ES6 <br>
+                        <code>
+                            function Person() { <br>
+                            this.age = 0 ; <br>
+                            setInterval(() => { <br>
+                            // |this| properly refers to the person object <br>
+                            this.age++ <br>
+                            }, 1000); <br>
+                            } <br>
+                            let p = new Person() <br>
+                        </code>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="Function_hoisting">
+            <header>Function hoisting</header>
+            <div>
+                <div>
+                    <p>
+                        Hoisting represents the process of accessing variables and functions before defining them. Code execution takes place in two passes: At the first pass, the interpreter receives
+                        all
+                        declarations of the functions, and then variables. No code is executed, functions are not called. At the second pass, the execution actually occurs. And even if the variable is
+                        defined after direct use, no error will occur, since the interpreter already knows all the variables during the first pass. That is, as if the code is beign raised with
+                        definition
+                        of functions and variables up to their immediate use. Variables that fall under hoisting get underfined. For example, consider the following code: <br>
+                        <code> console.log(a); // error</code><br>
+                        When it starts, there will be an error, since the variable x does not exist at all. Add a variable definition:<br>
+                        <code>
+                            consoloe.log(a) // undefined <br>
+                            var a = 1; <br>
+                        </code>
+                        In this case, the console will display the value undefined. At the first pass, the interpreter learns about the existence of the variable x. It gets the value undefined. The
+                        second
+                        pass call the console.log(a) method. <br>
+                        take another example: <br>
+                        <code>
+                            var c = a * b; <br>
+                            var a = 7; <br>
+                            var b = 3; <br>
+                        </code>
+                    </p>
+                </div>
+                <div>
+                    <h2>Hoisting. Function Expressions & Function Declarations</h2>
+                    <p>
+                        Function Expression <br>
+                        <code>
+                            var variableName = function(){ <br>
+                            // function body <br>
+                            } ; <br>
+                        </code>
+                        A Function Expression is creeated when the execution reaches it and is usable only from that moment. <br>
+                        <code>
+                            sayHi("John"); // error <br>
+                            var sayHi = function(name) { <br>
+                            alert( "Hello, " + name); <br>
+                            }; <br>
+                        </code>
+                        Function Declaration <br>
+                        <code>
+                            function functionName() { <br>
+                            // function body <br>
+                            } <br>
+
+                        </code>
+                        A function Declaration can be called earlier that it is defined. <br>
+                        <code>
+                            sayHi("John"); // Hello, John <br>
+                            function sayHi(name) { <br>
+                            alert ("Hello, " + name ); <br>
+                            } <br>
+                        </code>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-section" id="Strict_mode_of_javascript">
+            <header>Strict mode of javascript</header>
+            <div>
+                <p>to be continue</p>
+            </div>
+        </section>
+        <section class="main-section" id="Enhanced_Object_Literals">
+            <header>Enhanced Object Literals</header>
+            <div>
+                <p>to be continue</p>
+            </div>
+        </section>
+        <section class="main-section" id="Default,_Rest,_Spread">
+            <header>Default, Rest, Spread</header>
+            <div>
+                <p>to be continue</p>
+            </div>
+        </section>
+        <section class="main-section" id="Map_+_Set">
+            <header>Map + Set</header>
+            <div>
+                <p>to be continue</p>
+            </div>
+        </section>
+        <section class="main-section" id="Promises">
+            <header>Promises</header>
+            <div>
+                <p>to be continue</p>
+            </div>
+        </section>
+        <section class="main-section" id="Overriding">
+            <header>Overriding</header>
+            <div>
+                <h2>Function Overriding</h2>
+                <p>
+                    Function havethe abilityto override their actions.Overridingoccursby assigning an anonymousfunctionto a variable, which is called the same as the redifined function: <br>
+                    <code>
+                        function ShowMessage(){ <br>
+                        console.log("First message"); //before overriding <br>
+                        ShowMessage = fucntion(){ <br>
+                        console.log("Second message"); //after overriding <br>
+                        }; <br>
+                        ShowMessage(); //"First message" <br>
+                        ShowMessage(); //"Second message" <br>
+                    </code>
+                    When the function is first trigerred, the main block of the function operators acts, in particular, in this case, the message "First message" is displayed. And the first time the
+                    ShowMessage() function is triggered, it also overrides. Therefore, with all subsequent calls to the function, its overriden version is triggered, and the message "Second message"
+                    will be displayed on the console. But when redifining a function, some nuances must be taken into account. In particular, we will try copy the function into another variable and
+                    call the function throught this variable: <br>
+                    <code>
+                        // assigning the function reference before overriding <br>
+                        var writeMesagge; <br>
+                        ShowMessage(); //First message <br>
+                        ShowMessage(); //Second message <br>
+                        writeMesagge(); //First message <br>
+                        writeMesagge(); //First message br
+                    </code>
+                    Here, the showMessage() function is copied to the writeMessage variable before its overriden. Therefore, when calling writeMessage(), an undefined version of the showMessage()
+                    function will be called.
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
